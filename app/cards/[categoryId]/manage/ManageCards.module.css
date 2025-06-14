@@ -1,0 +1,82 @@
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+.heading {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.subheading {
+  margin-bottom: 1rem;
+  font-weight: normal;
+  color: #333;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.cardText {
+  font-size: 1rem;
+}
+
+.deleteButton {
+  padding: 0.3rem 0.7rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.homeButton {
+  background: transparent;
+  color: #0070f3;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border: none;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.textarea {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  resize: vertical;
+}

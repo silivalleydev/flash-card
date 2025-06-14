@@ -1,0 +1,12 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
