@@ -14,7 +14,7 @@ phases:
   post_build:
     commands:
       - echo Zipping app...
-      - zip -r app.zip .next public package.json package-lock.json node_modules
+      - zip -r app.zip .next public package.json package-lock.json
 
       - echo "☁️ Uploading to S3"
       - aws s3 cp app.zip s3://flash-card-codepipline/app.zip
