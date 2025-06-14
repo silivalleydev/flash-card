@@ -16,6 +16,13 @@ phases:
       - echo Zipping app...
       - zip -r app.zip .next public package.json node_modules
 
-artifacts:
-  files:
-    - app.zip
+      - echo "☁️ Uploading to S3"
+      - aws s3 cp app.zip s3://your-bucket-name/app.zip
+
+      - echo "🚀 Running deploy.sh on EC2 via SSM"
+      - aws ssm send-command \
+        --document-name "AWS-RunShellScript" \
+        --targets "Key=instanceIds,Values=i-0f784196bea0540f4" \
+        --parameters commands=["/home/ubuntu/deploy.sh"] \
+        --region ap-northeast-2 \
+        --comment "Next.js 자동 배포"
