@@ -17,7 +17,7 @@ phases:
       - zip -r app.zip .next public package.json node_modules
 
       - echo "☁️ Uploading to S3"
-      - aws s3 cp app.zip s3://your-bucket-name/app.zip
+      - aws s3 cp app.zip s3://flash-card-codepipline/app.zip
 
       - echo "🚀 Running deploy.sh on EC2 via SSM"
       - aws ssm send-command \
