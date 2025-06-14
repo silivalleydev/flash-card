@@ -1,6 +1,6 @@
 .container {
   max-width: 600px;
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
   padding: 1rem;
   font-family: sans-serif;
 }
@@ -25,10 +25,21 @@
 .input {
   flex: 1;
   padding: 0.5rem;
+  width: 50%;
   font-size: 1rem;
+  border: 1px solid #454545;
+}
+
+.textarea {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  resize: vertical;
+  border: 1px solid #454545;
 }
 
 .button {
+  width: 50px;
   padding: 0.5rem 1rem;
   background: #28a745;
   color: white;
@@ -72,11 +83,4 @@
   border: none;
   text-decoration: underline;
   font-size: 1rem;
-}
-
-.textarea {
-  flex: 1;
-  padding: 0.5rem;
-  font-size: 1rem;
-  resize: vertical;
 }
