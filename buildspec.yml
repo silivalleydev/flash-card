@@ -20,9 +20,4 @@ phases:
       - aws s3 cp app.zip s3://flash-card-codepipline/app.zip
 
       - echo "🚀 Running deploy.sh on EC2 via SSM"
-      - aws ssm send-command \
-        --document-name "AWS-RunShellScript" \
-        --targets "Key=instanceIds,Values=i-0f784196bea0540f4" \
-        --parameters commands=["/home/ubuntu/deploy.sh"] \
-        --region ap-northeast-2 \
-        --comment "Next.js 자동 배포"
+      - aws ssm send-command --document-name "AWS-RunShellScript" --targets "Key=instanceIds,Values=i-0f784196bea0540f4" --parameters commands=["/home/ubuntu/deploy.sh"] --region ap-northeast-2 --comment "Next.js 자동 배포"
