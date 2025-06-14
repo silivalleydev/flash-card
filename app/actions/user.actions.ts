@@ -4,8 +4,7 @@ import userApi from '../api/user.api';
 
 // ✅ 회원가입 액션
 export async function signupUserAction(data: {
-    name: string;
-    email: string;
+    id: string;
     password: string;
 }) {
     try {
@@ -21,9 +20,9 @@ export async function signupUserAction(data: {
 }
 
 // ✅ 로그인 액션
-export async function loginUserAction(id: string) {
+export async function loginUserAction(id: string, password: string) {
     try {
-        const res = await userApi.loginUser(id);
+        const res = await userApi.loginUser({ id, password });
         return { success: true, data: res };
     } catch (err) {
         console.error('Login failed:', err);

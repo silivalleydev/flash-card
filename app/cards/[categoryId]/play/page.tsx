@@ -7,7 +7,7 @@ import FlashcardPlayer from './client';
 
 interface CardsServerProps { }
 
-const CardsServer: FC<CardsServerProps> = ({ params }) => {
+const CardsServer: FC<CardsServerProps> = ({ params }: any) => {
     return (
         <BaseLayer>
             <MobileLayer>
